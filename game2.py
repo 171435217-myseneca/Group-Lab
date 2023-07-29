@@ -1,10 +1,3 @@
-import random
-
-def computer_choice():
-    possible_actions = ["rock", "paper", "scissors"]
-    computer_action = random.choice(possible_actions)
-    return computer_action
-
 def user_choice():
     user_action = input("Enter a choice (rock, paper, scissors): ")
     return user_action
@@ -29,10 +22,12 @@ def result(user_action,computer_action):
             print("Rock smashes scissors! You lose.")
 
 if __name__ == '__main__':
-    
+    while True:
         computer_action=computer_choice()
         user_action=user_choice()
         result(user_action,computer_action)
-
-     
+        play_again = input("Play again? (y/n): ")
+        if play_again.lower() != "y":
+            break
+   
         
