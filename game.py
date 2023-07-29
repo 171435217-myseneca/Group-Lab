@@ -29,10 +29,11 @@ def result(user_action,computer_action):
             print("Rock smashes scissors! You lose.")
 
 if __name__ == '__main__':
-    
+    while True:
         computer_action=computer_choice()
         user_action=user_choice()
         result(user_action,computer_action)
 
-     
-        
+        play_again = input("Play again? (y/n): ")
+        if play_again.lower() != "y":
+            break
